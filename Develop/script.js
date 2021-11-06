@@ -31,7 +31,7 @@ window.alert ("This needs a value");
 } 
 
 // ask user if they want LOWER CASE LETTER 
-var isLowerCase = ("Will your password include lowercase letters?");
+var isLowerCase = window.prompt ("Will your password include lowercase letters?");
       if (isLowerCase) {
    window.alert("Your password will include lowercase letters.");
    }  else {
