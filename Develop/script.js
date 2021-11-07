@@ -97,7 +97,6 @@ var generatePassword = function() {
       finalArray += SC 
    }
 
-
    //Create random selection variables 
    //for loop of length = user required length of password 
    for (var i = 0; i <= passwordLength; i++) {
@@ -106,10 +105,6 @@ var generatePassword = function() {
    }
    
    // This puts the password value into the textbox, changes function input to use textcontent  
-   // function generatePassword() {
-   //    document.getElementById("password").textContent; 
-   // }
-   console.log(password);
    var passwordText = document.querySelector("#password");
    passwordText.value = password;
    
@@ -121,19 +116,7 @@ var generatePassword = function() {
 
 
 
- // var random = finalArray [randomNumber]; 
-// password = password + randomChar; 
-
-
-
-
-// function generatePassword 
-
-
-// // // Write password to the #password input
-
-
-//    var password = generatePassword();
+ 
    
 
 
@@ -151,18 +134,7 @@ var generatePassword = function() {
 
   
   
-//     var password = []; 
-//     for(var i = 0; i < passwordLength; i++ ) {
-//      var pickResult = result[Math.floor(Math.random() * result.length)]; 
-//      password.push(pickedResult); 
-//     }
-//     var ps = password.join(""); 
-//     UserInput(ps); 
-//     return ps; 
 
-//  
-
-//   //Generate password function 
 
 
 
