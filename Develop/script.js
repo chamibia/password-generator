@@ -110,35 +110,3 @@ var generatePassword = function() {
    
 }; 
 
-
-
-
-
-
-
- 
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
