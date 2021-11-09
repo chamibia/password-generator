@@ -8,21 +8,21 @@ var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 
 //Create an array of lower case letters 
-var LowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]; 
+var LowerCase = "abcdefghijklmnopqrstuvwxyz"; 
 
 //Create an array of upper case letters 
-var UpperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];  
+var UpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";  
 
 //Create an array of special chars 
-var SC = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/",":", ";", " < ", "=", " > ", " ? ", "@", "[", "]", " ^ ", "_", "`", "{", "|", "}", "~"]; 
+var SC = "!#$%&()*+,-./:;<=>?@[]^_{|}~"; 
 
 // Create an array of numbers 
-var Num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]; 
+var Num = 1234567890; 
 
 //Create final empty array 
 var finalArray = []; 
 
-var password = "";
+
 
 var isLowerCase, isUpperCase, isNum, isSC;
 var passwordLength;
@@ -83,6 +83,7 @@ function writePassword() {
 
 //inside the function generatePassword()
 var generatePassword = function() {
+   var password = "";
    //if user has selected lower cases - add lower case to the final array 
    if(isLowerCase) { //true 
       finalArray += LowerCase; 
@@ -97,11 +98,13 @@ var generatePassword = function() {
       finalArray += SC 
    }
 
+   console.log(finalArray)
+
    //Create random selection variables 
    //for loop of length = user required length of password 
-   for (var i = 0; i <= passwordLength; i++) {
-      var randomVal = finalArray[Math.floor(Math.random() * finalArray.length)];
-      password += randomVal; 
+   for (var i = 0; i <= passwordLength - 1; i++) {
+      password += finalArray.charAt(Math.floor(Math.random() * finalArray.length));
+      
    }
    
    // This puts the password value into the textbox, changes function input to use textcontent  
